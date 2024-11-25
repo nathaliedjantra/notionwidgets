@@ -4,13 +4,14 @@
 
 body {
   font-family: 'Roboto Mono', monospace;
- // background-color: #c2e6e8;
+  background-color: #c2e6e8;
 }
 
 #root {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
 button,
@@ -33,14 +34,36 @@ button:focus {
   -moz-box-shadow: 0.2em 0.2em rgb(194, 91, 44) inset;
 }
 
+#start-stop,
+#reset {
+  background-color: #6a6b70; /* Updated background color */
+  border: none;
+  width: 42px;
+  height: 40px;
+  border-radius: 100%;
+  text-align: center;
+  box-shadow: 0.2em 0.2em #353638; /* Updated shadow color */
+  -webkit-box-shadow: 0.2em 0.2em #353638;
+  -moz-box-shadow: 0.2em 0.2em #353638;
+}
+
+#start-stop:active,
+#reset:active {
+  translate: 0.2em 0.2em;
+  box-shadow: 0.2em 0.2em #353638 inset; /* Updated shadow color for active state */
+  -webkit-box-shadow: 0.2em 0.2em #353638 inset;
+  -moz-box-shadow: 0.2em 0.2em #353638 inset;
+}
+
 /* Clock Body */
 
+/* Main Container */
 .clock-container {
-  background-color: rgb(141, 161, 92); 
+  background-color: #c6c7cb; /* Main color */
   width: 350px;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 10px 10px sienna;
+  box-shadow: 10px 10px #4f5051; /* Shadow color */
 }
 
 /* Display + Stop/Start/Reset Controls */
@@ -48,10 +71,10 @@ button:focus {
 #time-left {
   font-size: 70px;
   text-align: center;
-  background-color: rgb(150,180,175);
+  background-color: #8ca05b; /* Updated background color */
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 3px 3px rgb(121, 145, 141) inset;
+  box-shadow: 3px 3px #46502e inset; /* Updated shadow color */
 }
 
 #display-controls {
@@ -66,11 +89,11 @@ button:focus {
   font-size: 25px;
   text-align: center;
   padding-top: 2px;
-  background-color: rgb(150,180,175);
+  background-color: #8ca05b; /* Updated background color */
   border-radius: 10px;
   height: 40px;
   flex: 2;
-  box-shadow: 3px 3px rgb(121, 145, 141) inset;
+  box-shadow: 3px 3px #46502e inset; /* Updated shadow color */
 }
 
 #timer-ssr {
@@ -89,6 +112,38 @@ button:focus {
   flex-direction: row;
 }
 
+/* Break Length Increment Button */
+.break-container .inc-dec-btn-container button.inc-arrow {
+  background-color: #008452; /* Main */
+  box-shadow: 0.2em 0.2em #004229; /* Shadow */
+  -webkit-box-shadow: 0.2em 0.2em #004229;
+  -moz-box-shadow: 0.2em 0.2em #004229;
+}
+
+/* Break Length Decrement Button */
+.break-container .inc-dec-btn-container button:not(.inc-arrow) {
+  background-color: #0043ae; /* Main */
+  box-shadow: 0.2em 0.2em #002257; /* Shadow */
+  -webkit-box-shadow: 0.2em 0.2em #002257;
+  -moz-box-shadow: 0.2em 0.2em #002257;
+}
+
+/* Session Length Increment Button */
+.session-container .inc-dec-btn-container button.inc-arrow {
+  background-color: #deb22a; /* Main */
+  box-shadow: 0.2em 0.2em #6f5915; /* Shadow */
+  -webkit-box-shadow: 0.2em 0.2em #6f5915;
+  -moz-box-shadow: 0.2em 0.2em #6f5915;
+}
+
+/* Session Length Decrement Button */
+.session-container .inc-dec-btn-container button:not(.inc-arrow) {
+  background-color: #be061a; /* Main */
+  box-shadow: 0.2em 0.2em #5f030d; /* Shadow */
+  -webkit-box-shadow: 0.2em 0.2em #5f030d;
+  -moz-box-shadow: 0.2em 0.2em #5f030d;
+}
+
 .inc-dec-btn-container {
   margin: 0 auto;
   display: flex;
@@ -98,11 +153,11 @@ button:focus {
   height:60px;
 }
 
+/* Frames for Break and Session Length */
 .break-container, 
 .session-container {
   text-align: center;
-/*   display: inline-block; */
-  border: 2px solid rgb(234,178,156);
+  border: 2px solid #636466; /* Frame color */
   padding: 10px;
   border-radius: 10px;
   width: 48%;
