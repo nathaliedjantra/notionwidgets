@@ -11,15 +11,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 300vh;
 }
 
 button,
 button:active {
   background-color: rgb(234,178,156);
   border: none;
-  width: 42px;
-  height: 40px;
+  width: 32px;
+  height: 30px;
   border-radius: 100%;
   text-align: center;
   box-shadow: 0.2em 0.2em rgb(194, 91, 44);
@@ -34,12 +34,42 @@ button:focus {
   -moz-box-shadow: 0.2em 0.2em rgb(194, 91, 44) inset;
 }
 
+#start-stop {
+  position: absolute; /* Absolut positioniert */
+  top: 226px; /* 100px von oben */
+  right: 570px; /* 30px vom rechten Rand */
+  background-color: #6a6b70;
+  border: none;
+  width: 32px;
+  height: 30px;
+  border-radius: 100%;
+  text-align: center;
+  box-shadow: 0.2em 0.2em #353638;
+  -webkit-box-shadow: 0.2em 0.2em #353638;
+  -moz-box-shadow: 0.2em 0.2em #353638;
+}
+
+#reset {
+  position: absolute; /* Absolut positioniert */
+  top: 226px; /* 150px von oben */
+  right: 530px; /* 30px vom rechten Rand */
+  background-color: #6a6b70;
+  border: none;
+  width: 32px;
+  height: 30px;
+  border-radius: 100%;
+  text-align: center;
+  box-shadow: 0.2em 0.2em #353638;
+  -webkit-box-shadow: 0.2em 0.2em #353638;
+  -moz-box-shadow: 0.2em 0.2em #353638;
+}
+
 #start-stop,
 #reset {
   background-color: #6a6b70; /* Updated background color */
   border: none;
-  width: 42px;
-  height: 40px;
+  width: 32px;
+  height: 30px;
   border-radius: 100%;
   text-align: center;
   box-shadow: 0.2em 0.2em #353638; /* Updated shadow color */
@@ -60,7 +90,7 @@ button:focus {
 /* Main Container */
 .clock-container {
   background-color: #c6c7cb; /* Main color */
-  width: 350px;
+  width: 200px;
   border-radius: 20px;
   padding: 30px;
   box-shadow: 10px 10px #4f5051; /* Shadow color */
@@ -69,16 +99,16 @@ button:focus {
 /* Display + Stop/Start/Reset Controls */
 
 #time-left {
-  font-size: 70px;
+  font-size: 40px;
   text-align: center;
   background-color: #8ca05b; /* Updated background color */
-  padding: 20px;
+  padding: 10px;
   border-radius: 20px;
   box-shadow: 3px 3px #46502e inset; /* Updated shadow color */
 }
 
 #display-controls {
-  margin: 10px 0;
+  margin: 15px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -86,19 +116,19 @@ button:focus {
 }
 
 #timer-label {
-  font-size: 25px;
+  font-size: 15px;
   text-align: center;
-  padding-top: 2px;
+  padding-top: 6px;
   background-color: #8ca05b; /* Updated background color */
   border-radius: 10px;
-  height: 40px;
+  height: 25px;
   flex: 2;
   box-shadow: 3px 3px #46502e inset; /* Updated shadow color */
 }
 
 #timer-ssr {
   flex: 1;
-  margin-left: 30px;
+  margin-left: 25px;
   display: flex;
   justify-content: space-between;
   flex-start: end;
@@ -107,9 +137,54 @@ button:focus {
 /* Timer Length Controls */
 
 .length-container {
-  margin-top: 20px;
+  margin-top: 15px;
   display: flex;
   flex-direction: row;
+  height: 110px;
+}
+
+/* Move Increment Button for Break Length */
+.break-container .inc-dec-btn-container button.inc-arrow {
+  position: relative;  /* Set relative positioning */
+  top: -5px;  /* Move the increment arrow 10px upwards */
+  left: -25px;  /* Move the increment arrow 5px to the right */
+  background-color: #008452;
+  box-shadow: 0.2em 0.2em #004229;
+  -webkit-box-shadow: 0.2em 0.2em #004229;
+  -moz-box-shadow: 0.2em 0.2em #004229;
+}
+
+/* Move Decrement Button for Break Length */
+.break-container .inc-dec-btn-container button:not(.inc-arrow) {
+  position: relative;  /* Set relative positioning */
+top: -5px;  /* Move the increment arrow 10px upwards */
+  left: -28px;  /* Move the increment arrow 5px to the right */
+  background-color: #0043ae;
+  box-shadow: 0.2em 0.2em #002257;
+  -webkit-box-shadow: 0.2em 0.2em #002257;
+  -moz-box-shadow: 0.2em 0.2em #002257;
+}
+
+/* Increment Arrow for Session Length */
+.session-container .inc-dec-btn-container button.inc-arrow {
+  position: relative;  /* Set relative positioning */
+top: -5px;  /* Move the increment arrow 10px upwards */
+  left: -25px;  /* Move the increment arrow 5px to the right */
+  background-color: #deb22a;
+  box-shadow: 0.2em 0.2em #6f5915;
+  -webkit-box-shadow: 0.2em 0.2em #6f5915;
+  -moz-box-shadow: 0.2em 0.2em #6f5915;
+}
+
+/* Decrement Arrow for Session Length */
+.session-container .inc-dec-btn-container button:not(.inc-arrow) {
+  position: relative;  /* Set relative positioning */
+ top: -5px;  /* Move the increment arrow 10px upwards */
+  left: -28px;  /* Move the increment arrow 5px to the right */
+  background-color: #be061a;
+  box-shadow: 0.2em 0.2em #5f030d;
+  -webkit-box-shadow: 0.2em 0.2em #5f030d;
+  -moz-box-shadow: 0.2em 0.2em #5f030d;
 }
 
 /* Break Length Increment Button */
@@ -150,17 +225,30 @@ button:focus {
   flex-direction: row;
   justify-content: center;
   width: 140px;
-  height:60px;
+  height:15px;
 }
 
-/* Frames for Break and Session Length */
-.break-container, 
+/* Break Length Container */
+.break-container
+{
+  text-align: center;
+  border: 2px solid #636466;
+  padding-top: 5px;  /* Reduce padding from the top to move text up */
+  padding-bottom: 15px;  /* You can keep or adjust padding at the bottom */
+  border-radius: 10px;
+  width: 45%;
+  font-size: 13px
+}
+
+/* Session Length Container */
 .session-container {
   text-align: center;
-  border: 2px solid #636466; /* Frame color */
-  padding: 10px;
+  border: 2px solid #636466;
+  padding-top: 5px;  /* Reduce padding from the top to move text up */
+  padding-bottom: 15px;  /* Adjust bottom padding as needed */
   border-radius: 10px;
-  width: 48%;
+  width: 45%;
+   font-size: 13px
 }
 
 .timer-length {
@@ -169,5 +257,5 @@ button:focus {
 
 .break-container,
 .inc-arrow {
-  margin-right: 12px;
+  margin-right: 15px;
 }
