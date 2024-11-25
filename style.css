@@ -35,9 +35,9 @@ button:focus {
 }
 
 #start-stop {
-  position: absolute; /* Absolut positioniert */
-  top: 226px; /* 100px von oben */
-  right: 570px; /* 30px vom rechten Rand */
+  position: relative; /* Absolut positioniert */
+  top: -1px; /* 100px von oben */
+  right: 15px; /* 30px vom rechten Rand */
   background-color: #6a6b70;
   border: none;
   width: 32px;
@@ -50,9 +50,9 @@ button:focus {
 }
 
 #reset {
-  position: absolute; /* Absolut positioniert */
-  top: 226px; /* 150px von oben */
-  right: 530px; /* 30px vom rechten Rand */
+  position: relative; /* Absolut positioniert */
+  top: -1px; /* 150px von oben */
+  right: 6px; /* 30px vom rechten Rand */
   background-color: #6a6b70;
   border: none;
   width: 32px;
