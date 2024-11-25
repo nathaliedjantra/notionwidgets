@@ -9,9 +9,9 @@ body {
 
 #root {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 300vh;
+  align-items: left;
+  justify-content: left;
+  height: 90vh;
 }
 
 button,
@@ -253,6 +253,11 @@ top: -5px;  /* Move the increment arrow 10px upwards */
 
 .timer-length {
   font-size: 2em;
+}
+
+.break-container,
+.inc-arrow {
+  margin-right: 15px;
 }
 
 .break-container,
