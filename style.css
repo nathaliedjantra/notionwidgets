@@ -90,7 +90,8 @@ button:focus {
 /* Main Container */
 .clock-container {
   background-color: #c6c7cb; /* Main color */
-  width: 200px;
+  width: 200px;  /* Adjust the width (increase or decrease) */
+  height: 240px; /* Optionally adjust the height if you want a taller container */
   border-radius: 20px;
   padding: 30px;
   box-shadow: 10px 10px #4f5051; /* Shadow color */
